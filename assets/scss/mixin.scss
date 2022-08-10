@@ -1,0 +1,132 @@
+@mixin pageSize($height, $h, $w, $color) {
+    background-color: $color;
+    height: $height;
+    padding: $h $w ;
+}
+
+@mixin header1FSize {
+    font-family: Larish2;
+    font-size: 120px;
+    line-height: 100px;
+}
+
+@mixin header2FSize {
+    font-family: Larish2;
+    font-size: 100px;
+    line-height: 100px;
+}
+
+@mixin header3FSize {
+    font-family: Larish2;
+    font-size: 30px;
+}
+
+@mixin button {
+    color: #fff;
+    background-color: #000;
+    padding: 20px 50px;
+    border: 1px solid #fff;
+}
+@mixin buttonH {
+    color: #000;
+    padding: 20px 50px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+@mixin paragraphs {
+    font-family: 'Work Sans';
+    margin: 2vh 0;
+    font-size: 20px;
+}
+
+@mixin imgSize($sizeOfImage) {
+    height: $sizeOfImage;
+}
+
+@mixin imgPositionR($mt, $mr) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: $mt;
+    margin-right: $mr;
+}
+
+@mixin imgPositionL($mt, $ml) {
+    display: flex;
+    margin-top: $mt;
+    margin-left: $ml;
+}
+
+@mixin page34_1 ($textColor){
+    display:grid;
+    grid-template-columns: 50% 50%;
+    height: 80vh;
+    .heading{
+        p{
+            @include paragraphs;
+            color: $textColor;
+        }
+        h2{
+            width: 90%;
+            @include header2FSize;
+            color: $textColor;
+        }
+    }
+    .text{
+        align-content: center;
+        p:nth-of-type(1){
+            @include header3FSize;
+            color: $textColor;
+        }
+        p:nth-of-type(2){
+            @include paragraphs;
+            color: $textColor;
+        }
+    }
+}
+
+@mixin page5_01 ($texColor){
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    .heading{
+        width: 55%;
+        .heading{
+            @include paragraphs;
+            margin-bottom: 5vh;
+            color: #fff;
+        }
+        h3{
+            width: 90%;
+            font-family: Larish2;
+            font-size: 35px;
+            color: $texColor;
+        }
+    }
+    .text{
+        transform: rotate(45deg);
+        p{
+            display: block;
+            font-family: 'Lurish1';
+            background-color: #fff;
+            color: #000;
+            font-size: 40px;
+            animation:translater 10s infinite ;
+        }
+    }
+}
+
+@keyframes translater {
+    0%{
+        transform: translateX(0px) ;
+    }
+    100%{
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes rotater {
+    100%{
+        transform: rotateZ(360deg)
+    }
+}

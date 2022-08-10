@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Larish1';
+    src: url('../fonts/LarishNeueSemibold.woff');
+    font-family: 'Larish2';
+    src: url('../fonts/LarishNeueSemibold.woff2');
+}
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+@import './mixin.scss';
+@import './variables.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+
+    @include pageSize(100vh,0,10vw, #000);
+
+    .headerLine{
+        margin-left: 50%;
+        height: 20vh;
+        border-left: 2px solid gray;
+    }
+
+    .header{
+        margin-top: 5vh;
+        text-align: center;
+        color: $lightText;
+
+        p{
+            @include paragraphs;
+        }
+        h1{
+            @include header1FSize;
+            span{
+                display: block;
+                color: #000;
+                -webkit-text-stroke: 1px #fff;
+            }
+        }
+    }
+
+    .headerFooter{
+        display: flex;
+        justify-content: space-between;
+        margin : 25vh 0;
+
+        .button{
+            @include paragraphs;
+            @include button;
+        }
+        .button:hover{
+            @include buttonH;
+        }
+    }
+}
+
+main{
+    .page1_1{
+        @include pageSize(73vh,0vh,10vw, #000);
+        @include header2FSize;
+        color: $lightText;
+        font-weight: 300;
+    }
+
+    .page1_2{
+        @include pageSize(100vh,0,0, #000);
+        display: flex;
+        justify-content: space-between;
+        color: $lightText;
+
+        article{
+            display: flex;
+            flex-direction: column;
+            div{
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content:flex-end;
+                margin-left: 10vw;
+                p{
+                    @include paragraphs;
+                }
+                h2{
+                    @include header2FSize;
+                }
+            }
+            img{
+                height: 80%;
+            }
+        }
+    }
+
+    .page2{
+        div:nth-of-type(1){
+            @include imgPositionR(-10vh, 10vw);
+            img{
+                @include imgSize(30vh);
+            }
+            
+        }
+        div:nth-of-type(2){
+            @include imgPositionL(20vh, 5vw);
+            img{
+                @include imgSize(25vh);
+            }
+        }
+
+        div:nth-of-type(3){
+            width: 35vw;
+            margin-top: -5vh;
+            margin-left: 30%;
+            h2{
+                @include header2FSize;
+                font-size: 90px;
+                line-height: 80px;
+            }
+            p{
+                width: 36vw;
+                @include paragraphs;
+                font-size: 18px;
+                line-height: 40px;
+            }
+        }
+
+        div:nth-of-type(4){
+            @include imgPositionR(-10vh, 0vw);
+            img{
+                @include imgSize(20vh);
+            }
+        }
+
+        div:nth-of-type(5){
+            @include imgPositionL(10vh, 15vw);
+            img{
+                @include imgSize(30vh);
+            }        
+        }
+
+        div:nth-of-type(6){
+            @include imgPositionR(-5vh, 10vw);
+            img{
+                @include imgSize(30vh);
+            }        
+        }
+
+        div:nth-of-type(7){
+            @include imgPositionL(10vh,0);
+            img{
+                @include imgSize(20vh);
+            }    
+        }  
+
+        div:nth-of-type(8){
+            display:flex ;
+            width: 40vw;
+            text-align: justify;
+            margin-top: -16vh;
+            margin-left: 30%;
+            font-size: 18px;
+            line-height: 28px;
+            font-family: 'Work Sans';
+        }
+
+        div:nth-of-type(9){
+            @include imgPositionR(10vh, 20vw);
+            img{
+                @include imgSize(40vh);
+            }   
+        }
+        article{
+            height: 20vh;
+            margin-top: -10vh;
+            background-color: #000;
+        }
+    }
+
+    .page3{
+        @include pageSize(140vh, 0, 10vw, #000);
+        .page3_1{
+            @include page34_1($lightText);
+        }
+
+        .page3_2{
+            display: flex;
+            align-items: center;
+            height: 70vh;
+            img:nth-of-type(1){
+                @include imgSize(140%);
+            }
+            img:nth-of-type(2){
+                margin-left: -5vw;
+                @include imgSize(100%);
+            }
+            img:nth-of-type(3){
+                z-index: -1;
+                margin-left: -17vw;
+                margin-top: 80vh;
+                @include imgSize(90%);
+                animation: rotater 10s infinite;
+
+            }
+        }
+    }
+
+    .page4{
+        margin-top: 50vh;
+        @include pageSize(185vh, 10vh, 10vw, #fff);
+
+        .page4_1{
+            @include page34_1(#000);
+        }
+        .page4_2{
+            display: flex;
+            align-items: center;
+            height: 70vh;
+
+            img:nth-of-type(1){
+                @include imgSize(100%);
+            }
+            img:nth-of-type(2){
+                margin-left: -5vw;
+                @include imgSize(140%);
+            }
+        }
+    }
+}
+
+footer{
+    .page5{
+        @include pageSize(80vh, 0, 10vw, #000);
+
+            .page5_1{
+                @include page5_01($lightText);
+            }  
+            .button{
+                text-align: center;
+                width: 12vw;
+                @include button;
+                @include paragraphs;
+            }
+            .button:hover{
+                @include buttonH;
+            }
+    }
+
+    .page5Footer{
+        @include pageSize(20vh, 0, 10vw, #000);
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .social{
+            height: 25px;
+            img{
+                height: 100%;
+            }
+        }
+        p{
+            color: #fff;
+            @include paragraphs;
+        }
+        .logo{
+            height: 40px;
+            display: flex;
+            justify-content: end;
+            align-self: center;
+        }
+        
+    }
+}

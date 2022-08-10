@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
+@font-face {
+  font-family: "Larish1";
+  src: url("../fonts/LarishNeueSemibold.woff");
+  font-family: "Larish2";
+  src: url("../fonts/LarishNeueSemibold.woff2");
+}
+@keyframes translater {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes rotater {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #000;
+  height: 100vh;
+  padding: 0 10vw;
+}
+header .headerLine {
+  margin-left: 50%;
+  height: 20vh;
+  border-left: 2px solid gray;
+}
+header .header {
+  margin-top: 5vh;
+  text-align: center;
+  color: #fff;
+}
+header .header p {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+}
+header .header h1 {
+  font-family: Larish2;
+  font-size: 120px;
+  line-height: 100px;
+}
+header .header h1 span {
+  display: block;
+  color: #000;
+  -webkit-text-stroke: 1px #fff;
+}
+header .headerFooter {
+  display: flex;
+  justify-content: space-between;
+  margin: 25vh 0;
+}
+header .headerFooter .button {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+  color: #fff;
+  background-color: #000;
+  padding: 20px 50px;
+  border: 1px solid #fff;
+}
+header .headerFooter .button:hover {
+  color: #000;
+  padding: 20px 50px;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+main .page1_1 {
+  background-color: #000;
+  height: 73vh;
+  padding: 0vh 10vw;
+  font-family: Larish2;
+  font-size: 100px;
+  line-height: 100px;
+  color: #fff;
+  font-weight: 300;
+}
+main .page1_2 {
+  background-color: #000;
+  height: 100vh;
+  padding: 0 0;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+main .page1_2 article {
+  display: flex;
+  flex-direction: column;
+}
+main .page1_2 article div {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 10vw;
+}
+main .page1_2 article div p {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+}
+main .page1_2 article div h2 {
+  font-family: Larish2;
+  font-size: 100px;
+  line-height: 100px;
+}
+main .page1_2 article img {
+  height: 80%;
+}
+main .page2 div:nth-of-type(1) {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -10vh;
+  margin-right: 10vw;
+}
+main .page2 div:nth-of-type(1) img {
+  height: 30vh;
+}
+main .page2 div:nth-of-type(2) {
+  display: flex;
+  margin-top: 20vh;
+  margin-left: 5vw;
+}
+main .page2 div:nth-of-type(2) img {
+  height: 25vh;
+}
+main .page2 div:nth-of-type(3) {
+  width: 35vw;
+  margin-top: -5vh;
+  margin-left: 30%;
+}
+main .page2 div:nth-of-type(3) h2 {
+  font-family: Larish2;
+  font-size: 100px;
+  line-height: 100px;
+  font-size: 90px;
+  line-height: 80px;
+}
+main .page2 div:nth-of-type(3) p {
+  width: 36vw;
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+  font-size: 18px;
+  line-height: 40px;
+}
+main .page2 div:nth-of-type(4) {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -10vh;
+  margin-right: 0vw;
+}
+main .page2 div:nth-of-type(4) img {
+  height: 20vh;
+}
+main .page2 div:nth-of-type(5) {
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 15vw;
+}
+main .page2 div:nth-of-type(5) img {
+  height: 30vh;
+}
+main .page2 div:nth-of-type(6) {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -5vh;
+  margin-right: 10vw;
+}
+main .page2 div:nth-of-type(6) img {
+  height: 30vh;
+}
+main .page2 div:nth-of-type(7) {
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 0;
+}
+main .page2 div:nth-of-type(7) img {
+  height: 20vh;
+}
+main .page2 div:nth-of-type(8) {
+  display: flex;
+  width: 40vw;
+  text-align: justify;
+  margin-top: -16vh;
+  margin-left: 30%;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Work Sans";
+}
+main .page2 div:nth-of-type(9) {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10vh;
+  margin-right: 20vw;
+}
+main .page2 div:nth-of-type(9) img {
+  height: 40vh;
+}
+main .page2 article {
+  height: 20vh;
+  margin-top: -10vh;
+  background-color: #000;
+}
+main .page3 {
+  background-color: #000;
+  height: 140vh;
+  padding: 0 10vw;
+}
+main .page3 .page3_1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 80vh;
+}
+main .page3 .page3_1 .heading p {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+  color: #fff;
+}
+main .page3 .page3_1 .heading h2 {
+  width: 90%;
+  font-family: Larish2;
+  font-size: 100px;
+  line-height: 100px;
+  color: #fff;
+}
+main .page3 .page3_1 .text {
+  align-content: center;
+}
+main .page3 .page3_1 .text p:nth-of-type(1) {
+  font-family: Larish2;
+  font-size: 30px;
+  color: #fff;
+}
+main .page3 .page3_1 .text p:nth-of-type(2) {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+  color: #fff;
+}
+main .page3 .page3_2 {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+}
+main .page3 .page3_2 img:nth-of-type(1) {
+  height: 140%;
+}
+main .page3 .page3_2 img:nth-of-type(2) {
+  margin-left: -5vw;
+  height: 100%;
+}
+main .page3 .page3_2 img:nth-of-type(3) {
+  z-index: -1;
+  margin-left: -17vw;
+  margin-top: 80vh;
+  height: 90%;
+  animation: rotater 10s infinite;
+}
+main .page4 {
+  margin-top: 50vh;
+  background-color: #fff;
+  height: 185vh;
+  padding: 10vh 10vw;
+}
+main .page4 .page4_1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 80vh;
+}
+main .page4 .page4_1 .heading p {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+  color: #000;
+}
+main .page4 .page4_1 .heading h2 {
+  width: 90%;
+  font-family: Larish2;
+  font-size: 100px;
+  line-height: 100px;
+  color: #000;
+}
+main .page4 .page4_1 .text {
+  align-content: center;
+}
+main .page4 .page4_1 .text p:nth-of-type(1) {
+  font-family: Larish2;
+  font-size: 30px;
+  color: #000;
+}
+main .page4 .page4_1 .text p:nth-of-type(2) {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+  color: #000;
+}
+main .page4 .page4_2 {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+}
+main .page4 .page4_2 img:nth-of-type(1) {
+  height: 100%;
+}
+main .page4 .page4_2 img:nth-of-type(2) {
+  margin-left: -5vw;
+  height: 140%;
+}
+
+footer .page5 {
+  background-color: #000;
+  height: 80vh;
+  padding: 0 10vw;
+}
+footer .page5 .page5_1 {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+}
+footer .page5 .page5_1 .heading {
+  width: 55%;
+}
+footer .page5 .page5_1 .heading .heading {
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+  margin-bottom: 5vh;
+  color: #fff;
+}
+footer .page5 .page5_1 .heading h3 {
+  width: 90%;
+  font-family: Larish2;
+  font-size: 35px;
+  color: #fff;
+}
+footer .page5 .page5_1 .text {
+  transform: rotate(45deg);
+}
+footer .page5 .page5_1 .text p {
+  display: block;
+  font-family: "Lurish1";
+  background-color: #fff;
+  color: #000;
+  font-size: 40px;
+  animation: translater 10s infinite;
+}
+footer .page5 .button {
+  text-align: center;
+  width: 12vw;
+  color: #fff;
+  background-color: #000;
+  padding: 20px 50px;
+  border: 1px solid #fff;
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+}
+footer .page5 .button:hover {
+  color: #000;
+  padding: 20px 50px;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+footer .page5Footer {
+  background-color: #000;
+  height: 20vh;
+  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+footer .page5Footer .social {
+  height: 25px;
+}
+footer .page5Footer .social img {
+  height: 100%;
+}
+footer .page5Footer p {
+  color: #fff;
+  font-family: "Work Sans";
+  margin: 2vh 0;
+  font-size: 20px;
+}
+footer .page5Footer .logo {
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-self: center;
+}
+
+/*# sourceMappingURL=style.css.map */
