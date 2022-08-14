@@ -4,6 +4,12 @@
     padding: $h $w ;
 }
 
+@mixin pageSizeBear($height, $h, $w, $color) {
+    background-color: $color;
+    height: $height;
+    padding: $h 0 $h $w;
+}
+
 @mixin header1FSize {
     font-family: Larish2;
     font-size: 120px;
@@ -86,9 +92,6 @@
 }
 
 @mixin page5_01 ($texColor){
-    display: flex;
-    height: 80vh;
-    align-items: center;
     .heading{
         width: 55%;
         .heading{
@@ -103,30 +106,38 @@
             color: $texColor;
         }
     }
+    
     .text{
-        transform: rotate(45deg);
-        p{
-            display: block;
-            font-family: 'Lurish1';
+        left: 0;
+        width: 100vw;
+        transform: translateX(30vh);
+        div{
+            transform: rotate(45deg);
             background-color: #fff;
-            color: #000;
-            font-size: 40px;
-            animation:translater 10s infinite ;
+            p{
+                display: block;
+                font-family: 'Lurish1';
+                color: #000;
+                font-size: 80px;
+                white-space: nowrap;
+                animation: translater 10s infinite;
+            }
         }
+        
     }
 }
 
 @keyframes translater {
     0%{
-        transform: translateX(0px) ;
+        transform: translateX(500px) ;
     }
     100%{
-        transform: translateX(-100px);
+        transform: translateX(0px);
     }
 }
 
 @keyframes rotater {
     100%{
-        transform: rotateZ(360deg)
+        transform: rotateZ(720deg)
     }
 }

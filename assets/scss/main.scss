@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 header{
@@ -26,6 +27,7 @@ header{
     }
 
     .header{
+        overflow-y: hidden;
         margin-top: 5vh;
         text-align: center;
         color: $lightText;
@@ -179,15 +181,16 @@ main{
     }
 
     .page3{
-        @include pageSize(140vh, 0, 10vw, #000);
+        @include pageSizeBear(140vh, 0vh, 10vw, #000);
         .page3_1{
+            margin-right: 20vh;
             @include page34_1($lightText);
         }
 
         .page3_2{
             display: flex;
             align-items: center;
-            height: 70vh;
+            height: 60vh;
             img:nth-of-type(1){
                 @include imgSize(140%);
             }
@@ -195,14 +198,21 @@ main{
                 margin-left: -5vw;
                 @include imgSize(100%);
             }
-            img:nth-of-type(3){
-                z-index: -1;
-                margin-left: -17vw;
-                margin-top: 80vh;
-                @include imgSize(90%);
-                animation: rotater 10s infinite;
-
+            .bearDiv{
+                overflow: hidden;
+                width: 30vw;
+                height: 30vw;
+                margin-top: 70vh;
+                img{ 
+                    @include imgSize(100%);
+                    z-index: -1;
+                    animation: rotater 10s infinite;
+                    overflow: hidden;
+                }
             }
+            
+            
+            
         }
     }
 
@@ -219,23 +229,33 @@ main{
             height: 70vh;
 
             img:nth-of-type(1){
-                @include imgSize(100%);
+                @include imgSize(90%);
             }
             img:nth-of-type(2){
                 margin-left: -5vw;
-                @include imgSize(140%);
+                @include imgSize(130%);
+                overflow: hidden;
             }
         }
     }
 }
 
 footer{
+    overflow: hidden;
     .page5{
-        @include pageSize(80vh, 0, 10vw, #000);
-
+        @include pageSize(70vh, 0, 0vw, #000);
+        
             .page5_1{
                 @include page5_01($lightText);
+                .text{
+                // display: block;
+                white-space: nowrap;
+                }
+                .divheading{
+                    @include pageSize(60vh, 0vh, 10vw, #000);
+                }
             }  
+            
             .button{
                 text-align: center;
                 width: 12vw;
@@ -248,9 +268,13 @@ footer{
     }
 
     .page5Footer{
-        @include pageSize(20vh, 0, 10vw, #000);
+        @include pageSize(30vh, 0vh, 10vw, #000);
         display: grid;
         grid-template-columns: 50% 50%;
+
+        .left{
+            align-self: center;
+        }
         .social{
             height: 25px;
             img{
@@ -267,6 +291,5 @@ footer{
             justify-content: end;
             align-self: center;
         }
-        
     }
 }
