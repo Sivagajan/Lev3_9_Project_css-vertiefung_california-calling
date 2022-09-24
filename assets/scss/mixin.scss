@@ -137,7 +137,11 @@
 }
 
 @keyframes rotater {
-    100%{
-        transform: rotateZ(720deg)
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(360deg)
     }
 }

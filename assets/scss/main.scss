@@ -206,7 +206,7 @@ main{
                 img{ 
                     @include imgSize(100%);
                     z-index: -1;
-                    animation: rotater 10s infinite;
+                    animation: rotater 10s infinite linear;
                     overflow: hidden;
                 }
             }

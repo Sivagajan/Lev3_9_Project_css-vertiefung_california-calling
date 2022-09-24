@@ -14,8 +14,11 @@
   }
 }
 @keyframes rotater {
-  100% {
-    transform: rotateZ(720deg);
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
   }
 }
 * {
@@ -272,7 +275,7 @@ main .page3 .page3_2 .bearDiv {
 main .page3 .page3_2 .bearDiv img {
   height: 100%;
   z-index: -1;
-  animation: rotater 10s infinite;
+  animation: rotater 10s infinite linear;
   overflow: hidden;
 }
 main .page4 {
