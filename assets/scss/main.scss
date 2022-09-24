@@ -16,6 +16,10 @@
     
 }
 
+body{
+    max-width: 1605px;
+}
+
 header{
 
     @include pageSize(100vh,0,10vw, #000);
